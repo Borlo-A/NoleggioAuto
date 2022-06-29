@@ -9,8 +9,8 @@ public class Event implements Comparable<Event>{
 		AUTO_RESTITUITA
 	}
 	
-	private LocalTime time ;
-	private EventType type ;
+	private LocalTime time;
+	private EventType type;
 	
 	
 	public Event(LocalTime time, EventType type) {

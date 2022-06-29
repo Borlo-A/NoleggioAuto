@@ -8,22 +8,22 @@ import it.polito.tdp.noleggio.model.Event.EventType;
 
 public class Simulatore {
 	
-	// Parametri di ingresso
-	private int NC ;
-	private Duration T_IN = Duration.ofMinutes(10) ;
-	private Duration T_TRAVEL = Duration.ofHours(1) ; // 1, 2, o 3 volte tanto
+// Parametri di ingresso
+	private int NC;
+	private Duration T_IN = Duration.ofMinutes(10);
+	private Duration T_TRAVEL = Duration.ofHours(1); // 1, 2, o 3 volte tanto
 	
-	// Valori calcolati in uscita
-	private int nClientiTot ;
-	private int nClientiInsoddisfatti ;
+// Valori calcolati in uscita
+	private int nClientiTot;
+	private int nClientiInsoddisfatti;
+
+// Stato del mondo
+	private int autoDisponibili;
 	
-	// Stato del mondo
-	private int autoDisponibili ;
+// Coda degli eventi
+	private PriorityQueue<Event> queue;
 	
-	// Coda degli eventi
-	private PriorityQueue<Event> queue ;
-	
-	// Costruttore
+// Costruttore
 	public Simulatore(int NC) {
 		this.NC = NC ;
 		this.queue = new PriorityQueue<>();
